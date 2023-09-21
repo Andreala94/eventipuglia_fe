@@ -48,19 +48,19 @@ const Profilo = () => {
     <>
       <NavBar />
 
-      <Container className="form-color d-flex flex-column align-items-center p-3 mt-5 border rounded-5">
-        <Card style={{ width: '18rem' }}>
+      <Container className="form-color d-flex flex-column align-items-center  mt-5 border rounded-5  ">
+        <Card className='mt-3' style={{ width: '18rem' }}>
           <Card.Img variant="top" src={getUserAvatar()} />
           <Card.Body>
-            <Card.Title>Ciao: {getUserName()}</Card.Title>
+            <Card.Title>Ciao: {getUserName()} benvenuto nella tua pagina profilo</Card.Title>
           </Card.Body>
         </Card>
-        <p className='fw-bold mb-5 mt-3'>I miei ordini:</p>
+        <h4 className='fw-bolder mb-5 mt-3'>I miei ordini:</h4>
 
-        <Row>
+        <Row className='mb-3 justify-content-center '>
           {biglietti &&
             biglietti.map((biglietto) => (
-              <div className="card" style={{ width: '18rem' }}>
+              <div className="card text-center m-2" style={{ width: '18rem' }}>
                 <img src={biglietto.immagine} className="card-img-top" alt={biglietto.titolo} />
                 <div className="card-body">
                   <h5 className="card-title">{biglietto.titolo}</h5>

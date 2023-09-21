@@ -64,7 +64,7 @@ const CardEventi = ({ img, prezzo, title, luogo, data, descrizione, id }) => {
 
 
   return (
-    <Card id={id} className='carta' style={{ "margin": "0.5rem"}} >
+    <Card id={id} className='card' style={{ "margin": "0.5rem"}} >
       <Card.Img variant="top" src={img} style={{ "width": "100%", "height": "auto" }} />
       <Card.Body>
         <label className="mb-1">Titolo:</label>
