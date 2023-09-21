@@ -1,0 +1,17 @@
+.bgcolor{
+    
+    background-color: rgba(255, 255, 255, 0.9); /* Utilizza un'opacità per rendere la navbar trasparente */
+    color: black;
+    
+}
+.font{
+    font-family: Bradley Hand, cursive;
+    font-weight: bolder;
+}
+.logo > img{
+    height: 4rem;
+    width: 6em;
+}
+body {
+    overflow-x: hidden; /* Blocca lo scroll orizzontale */
+  }

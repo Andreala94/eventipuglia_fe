@@ -1,0 +1,33 @@
+.carosello{
+    text-align: center;
+
+}
+
+@media (max-width: 767px){
+    .carosello{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 540px ) {
+    .dimensione{
+        width: 22em !important;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px ){
+    .dimensione{
+        margin-top: 30px;
+    
+    }
+}
+
+
+
+@media (min-width: 1200px){
+   .carosello > img {
+        width: auto;
+        height: 500px !important;
+    }
+}

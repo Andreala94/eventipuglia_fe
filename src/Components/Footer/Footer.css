@@ -1,0 +1,28 @@
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #111;
+  
+  }
+
+  .lower, .upper{
+    text-align: center;
+    
+  }
+  .bgcolor{
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Utilizza un'opacità per rendere la navbar trasparente */
+    color: black;
+    
+  }
+  @media (min-width: 375px) and (max-width: 375px) {
+    div > .diritti {
+      text-align: center;
+    }
+  }
+  @media (min-width: 376px) and (max-width: 700px) {
+    div > .diritti {
+      text-align: center ;
+    }
+  }
+  
