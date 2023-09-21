@@ -60,55 +60,18 @@ const Profilo = () => {
         <Row>
           {biglietti &&
             biglietti.map((biglietto) => (
-              
-              <div md={6} lg={4} sm={6} xl={3} className="mb-4">
-                <img src={biglietto.immagine} style={{ "width": "10rem", "height": "5rem", "margin-bottom": "2px" }} />
-                <ul className="list-group">
-                  <li className="list-group-item">
-                    <label className="mb-1">Titolo:</label>
-                    <span>{biglietto.titolo}</span>
-                  </li>
-                  <li className="list-group-item">
-                    <label className="mb-1">Prezzo:</label>
-                    <span>{biglietto.prezzo}</span>
-                  </li>
-                  <li className="list-group-item">
-                    <label className="mb-1">Quantità:</label>
-                    <span>{biglietto.quantita}</span>
-                  </li>
-                </ul>
+              <div className="card" style={{ width: '18rem' }}>
+                <img src={biglietto.immagine} className="card-img-top" alt={biglietto.titolo} />
+                <div className="card-body">
+                  <h5 className="card-title">{biglietto.titolo}</h5>
+                  <p className="card-text">Prezzo: {biglietto.prezzo} €</p>
+                  <p className="card-text">Quantità: {biglietto.quantita}</p>
+                  <p className="card-text">Acquistato il: {new Date(biglietto.createdAt).toLocaleDateString()} {new Date(biglietto.createdAt).toLocaleTimeString()}</p>
+                </div>
               </div>
+
             ))}
         </Row>
-
-
-        {/* <Row>
-                    {biglietti &&
-                       biglietti.map((biglietto) => (
-                            <Col
-                                
-                            md={6}
-                            lg={4}
-                            sm={6}
-                            xl={3}
-                            className="mb-4"
-                            >
-                              <Card className='d-flex' style={{ "width": "10rem"}}>
-                              <Card.Img style={{ "width": "10rem"}} variant="top" src={biglietto.immagine}  />
-                              <Card.Body>
-                              <label className="mb-1 ">Titolo:</label>
-                                <Card.Title>{biglietto.titolo}</Card.Title>
-                                <label className="mb-1">Prezzo:</label>
-                                <Card.Text >{biglietto.prezzo}</Card.Text> 
-                                <label className="mb-1">Quantita:</label>
-                                <Card.Text >{biglietto.quantita}</Card.Text> 
-
-                              </Card.Body>
-
-                              </Card>
-                            </Col>
-                        ))}
-                </Row> */}
 
 
 
