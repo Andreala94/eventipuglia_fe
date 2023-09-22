@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Footer/Footer.css'
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -15,7 +16,7 @@ export const Footer = () => {
             <div className="topic text-dark text-center ">Contatti</div>
 
             <div className="email text-dark">
-              <a href="#"><i className="fas fa-envelope" />andrea.lauro94@gmail.com</a>
+              <Link href="#"><i className="fas fa-envelope" />andrea.lauro94@gmail.com</Link>
             </div>
           </div>
 
@@ -30,3 +31,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export default Footer;

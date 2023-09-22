@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NavBar from '../NavBar/NavBar';
 import '../Pages/CSS/Profilo.css'
 import { Card,  Container,  Row } from 'react-bootstrap';
+import Footer from '../Footer/Footer'
 
 
 const Profilo = () => {
@@ -73,9 +74,9 @@ const Profilo = () => {
             
         </Row>
 
-
-
       </Container>
+
+      <Footer />
     </>
 
   )
