@@ -45,7 +45,7 @@ const Profilo = () => {
   return (
     <>
       <NavBar />
-         <Row></Row>
+         
       <Container className="form-color d-flex flex-column align-items-center  mt-5 border rounded-5  ">
         <Card className='mt-3' style={{ width: '18rem' }}>
           <Card.Img variant="top" src={getUserAvatar()} />
