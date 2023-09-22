@@ -10,6 +10,7 @@ import './CSS/DettagliEvento.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import {  toast } from 'react-toastify';
+import Footer from '../Footer/Footer'
 
 
 
@@ -127,6 +128,7 @@ const acquistoBiglietto = () =>{
       </Row>
    
     </Container>
+    <Footer />
     </>
     
   )

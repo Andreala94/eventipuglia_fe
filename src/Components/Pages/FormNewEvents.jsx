@@ -3,6 +3,7 @@ import NavBar from '../NavBar/NavBar';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import './CSS/FormNewEvents.css';
+import Footer from '../Footer/Footer'
 
 function FormNewEvents ()  {
     const navigate = useNavigate();
@@ -164,7 +165,7 @@ const getUserName = () => {
                 </Button>
             </Form>
 
-   
+   <Footer /> 
    </> 
     
   )
