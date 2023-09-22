@@ -80,7 +80,7 @@ function NavBar( {  setArrayEventi, totaleEventi } ) {
     
     <Navbar  expand="lg" className=" bgcolor" >
       <Container fluid>
-        <Navbar.Brand href="#" className='logo'>
+        <Navbar.Brand href="/" className='logo'>
         <img src="https://res.cloudinary.com/dsmb3mzsp/image/upload/v1693936569/CapstoneEpicode/logo_made_in_valle_d_itria_amrg1b.png" alt="Descrizione dell'immagine" />
         </Navbar.Brand>
         <Nav.Link>
