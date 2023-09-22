@@ -107,7 +107,7 @@ const getUserName = () => {
      <h1 className='text-light d-flex justify-content-center p-3'><mark>Benvenuto/a, {getUserName()} inizia subito. Crea il tuo evento!</mark> </h1>
 
    <Form
-                className="m-2 form-color p-4 border rounded-5 "
+                className="m-4 formcolor p-4 border rounded-5 "
                 encType="multipart/form-data"
                 onSubmit={handleSubmit}
                 

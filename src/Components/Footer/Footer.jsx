@@ -21,8 +21,8 @@ export const Footer = () => {
           </div>
 
         </div>
-        <div className="diritti bottom text-dark px-0 ms-5 d-flex justify-content-end">
-          <p className='mb-0 text-center'>Copyright © 2023 Andrea Lauro</p>
+        <div className="diritti bottom text-dark px-0 d-flex justify-content-center">
+          <p className='my-2'>Copyright © 2023 Andrea Lauro</p>
         </div>
 
       </div>
