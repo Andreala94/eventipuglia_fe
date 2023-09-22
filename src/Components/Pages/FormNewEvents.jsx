@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import './CSS/FormNewEvents.css';
 import Footer from '../Footer/Footer'
+import {  toast } from 'react-toastify';
 
 function FormNewEvents ()  {
     const navigate = useNavigate();
@@ -70,8 +71,22 @@ const handleSubmit = async (event) => {
                     body: JSON.stringify(postFormData),
                 }
             )
-            return response.json()
-            .then((response)=> navigate("/"))
+           const risposta = await response.json()
+           if(risposta.statusCode === 201){
+            navigate("/")
+           }else{
+            toast.error('Evento non aggiunto!', { 
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+           }
+            
         } catch (error) {
             console.error('Failed to save the post')
         }
@@ -142,7 +157,8 @@ const getUserName = () => {
                 <Form.Group controlId="formContent" className="mt-3">
                     <Form.Label>Prezzo</Form.Label>
                     <Form.Control
-                        type="text"
+                        type="number"
+                        min='0'
                         className='border border-dark'
                         placeholder="Inserisci il prezzo"
                         onChange={(event) => setPrezzoValue(event.target.value)}
