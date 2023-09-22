@@ -3,9 +3,8 @@
 }
 
 @media (max-width: 575px) {
-    .form-color{
-      margin-left: 10px !important;
-      margin-right: 10px !important;
-      
-    }
+  .form-color{
+    width: 94% !important;
+    
   }
+}

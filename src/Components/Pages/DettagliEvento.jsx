@@ -70,10 +70,10 @@ const acquistoBiglietto = () =>{
   }else{
     arrayBiglietti.push({
     id: id,
-    titolo: title,
-    prezzo: prezzo,
+    titolo: titleValue,
+    prezzo: prezzoValue,
     quantita: 1,
-    immagine: img
+    immagine: imgValue
     
   })}
 
