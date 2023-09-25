@@ -34,6 +34,8 @@ function Shop() {
         theme: "colored",
       });
     } else {
+      // Invia una richiesta HTTP POST all'endpoint `/shop/biglietto` dell'API backend.
+      // La richiesta include il carrello e l'ID utente dell'utente.
       try {
          await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/shop/biglietto`,
           {
@@ -75,8 +77,9 @@ function Shop() {
 
     if (carrello) {
       for (const biglietto of carrello) {
+        // Verifica se il prezzo del biglietto è un numero valido.
         if (!isNaN(parseInt(biglietto.prezzo))) {
-          totale += parseInt(biglietto.prezzo) * biglietto.quantita
+          totale += parseInt(biglietto.prezzo) * biglietto.quantita  // Aggiunge il prezzo del biglietto moltiplicato per la quantità del biglietto al totale.
         }
       }
     }
@@ -115,7 +118,7 @@ function Shop() {
     const bigliettoEvento = carrello.find((biglietto) => biglietto.id === id);
 
     if (bigliettoEvento) {
-      //il biglietto esiste nel carrello
+      //il biglietto esiste nel carrello allora:
 
       if (incremento === true) {
         bigliettoEvento.quantita++;
@@ -137,7 +140,6 @@ function Shop() {
     <>
       <Button style={{ "position": "relative" }} className='ms-2' variant="outline-success" onClick={handleShow}>
         <FontAwesomeIcon icon={faShoppingCart} />
-       {/* <span id='notifica'></span> */}
       </Button>
 
       <Offcanvas show={show} onHide={handleClose} placement="end">
