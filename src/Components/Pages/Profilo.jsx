@@ -51,7 +51,7 @@ const Profilo = () => {
         <Card className='mt-3' style={{ width: '18rem' }}>
           <Card.Img variant="top" src={getUserAvatar()} />
           <Card.Body>
-            <Card.Title>Ciao: {getUserName()} benvenuto nella tua pagina profilo</Card.Title>
+            <Card.Title>Ciao: {getUserName()} <br></br> Benvenuto nella tua pagina profilo</Card.Title>
           </Card.Body>
         </Card>
         <h4 className='fw-bolder mb-5 mt-3'>I miei ordini:</h4>
