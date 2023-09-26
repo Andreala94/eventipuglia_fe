@@ -42,7 +42,7 @@ function HomePage(){
     <NavBar totaleEventi={totaleEventi} setArrayEventi={setArrayEventi} />
     <Carosello />  
     <NewEvents  />
-    {isLoading ? <div>Loading...</div> : <ListaEventi eventi={arrayEventi} />}
+    {isLoading ? <div style={{"backgroundColor": "red"}}>Loading...</div> : <ListaEventi eventi={arrayEventi} />}
     <Footer />
    
     </>
