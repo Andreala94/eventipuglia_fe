@@ -1,6 +1,6 @@
 import React from 'react'
-import '../Footer/Footer.css'
-import { Link } from "react-router-dom";
+import '../Footer/Footer.css';
+
 
 export const Footer = () => {
   return (
@@ -16,7 +16,11 @@ export const Footer = () => {
             <div className="topic text-dark text-center ">Contatti</div>
 
             <div className="email text-dark">
-              <Link href="#"><i className="fas fa-envelope" />andrea.lauro94@gmail.com</Link>
+            <a href="https://mail.google.com" target="_blank">andrea.lauro94@gmail.com</a>.
+              <p>
+                Puoi trovare il mio profilo LinkedIn<br></br>
+                <a href="https://www.linkedin.com/in/andrea-lauro-113b6225b/" target="_blank">Andrea Lauro</a>.
+              </p>
             </div>
           </div>
 
@@ -27,7 +31,7 @@ export const Footer = () => {
 
       </div>
 
-      
+
     </footer>
   )
 }
