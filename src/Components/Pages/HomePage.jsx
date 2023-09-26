@@ -14,6 +14,7 @@ function HomePage(){
 
   const [arrayEventi, setArrayEventi] = useState([])
   const [totaleEventi, setTotaleEventi] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
 
     const getEventiApi = async () => {
         try {
@@ -23,6 +24,7 @@ function HomePage(){
 
             setArrayEventi(response.eventi)
             setTotaleEventi(response.eventi)
+            setIsLoading(false);
         } catch (error) {
             console.log('Errore nella risposta!')
         }
@@ -40,7 +42,7 @@ function HomePage(){
     <NavBar totaleEventi={totaleEventi} setArrayEventi={setArrayEventi} />
     <Carosello />  
     <NewEvents  />
-    <ListaEventi eventi={arrayEventi} />
+    {isLoading ? <div>Loading...</div> : <ListaEventi eventi={arrayEventi} />}
     <Footer />
    
     </>
